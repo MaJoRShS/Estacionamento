@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+html{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+
+}
+
+body{
+    background-color: #000000;
+    color: #FFFFFF;
+
+}
+
+h1{
+    /* margin-top: 5%; */
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.content{
+    width: 500px;
+    margin-left: 30%;
+    margin-top: 5%;
+    
+}
+
+.sucesso{
+    width: 500px;
+    height: 150px;
+    margin-left: 30%;
+    background-color:rgba();
+    display: none;
+    color: #cfffff;
+    font-size: 16pt;
+
+}
+
+/* #consulta{
+    width: 350px;
+    margin-left: 30%;
+} */
