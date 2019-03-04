@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set('America/Sao_Paulo');
-$data = date("m/d/Y");
+$data = date("Y-d-m");
 $hora = '12:00';
 $saida = date("H:i");
 $cnpj = '99.999.999/9999-99';
@@ -40,6 +40,18 @@ function calcularDiferenca($hora_inicial, $hora_final) {
 
     $tempo = calcularDiferenca($hora,$saida);
 
+    
+if ($tempo <= '00:15:00') {
+    $dinheiro = '2,50';
+} else if($tempo <= '00:30:00') {
+    $dinheiro = '5,00';
+}elseif ($tempo <= '00:45:00') {
+    $dinheiro = '7,50';
+}else if ($tempo <= '00:59:00') {
+    $dinheiro = '10,00';
+}else{
+    $dinheiro = '15,00';
+}
 
 
 
@@ -48,6 +60,7 @@ $_POST['data'] = $data;
 $_POST['hentrada'] = $hora;
 $_POST['hsaida'] =$saida;
 $_POST['cnpj'] = $cnpj;
+$_POST['tempo'] = $tempo;
 $_POST['dinheiro'] = $dinheiro;
 
 

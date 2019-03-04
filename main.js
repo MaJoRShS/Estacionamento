@@ -60,18 +60,19 @@ $(function(){
 
   $.ajax({
     type: "POST",
-    url: "/php/entrada.php",
+    url: "/php/insert/insere.php",
     data: txt,
     dataType: "json",
     success: function (response) {
       $('.sucesso').html('Cadastro Realizado com Sucesso: <br>'+ 'placa : '+response.placa+ '<br>Data :'+response.data+ '<br>Entrada :'+response.hentrada);
     },
     error: function(){
-      $('.sucesso').html('Erro ao cadastrar Veiculo <br> Por favor verifique se todos so campos estão preenchidos corretamente');
+      $('.sucesso').html('Erro ao cadastrar Veiculo');
     }
   });
 
   });
+
 
 //Pesquisa
 $('#consulta').submit(function (e) { 

@@ -1,13 +1,15 @@
-<?php
-//conexão com o servidor
-$conect = mysql_connect("127.0.0.1", "root", "");
- 
-// Caso a conexão seja reprovada, exibe na tela uma mensagem de erro
-if (!$conect) die ("<h1>Falha na conexão com o Banco de Dados!</h1>");
- 
-// Caso a conexão seja aprovada, então conecta o Banco de Dados.
-$db = mysql_select_db("estacionamento");
-/*Configurando este arquivo, depois é só você dar um include em suas paginas php,
-isto facilita muito, pois caso haja necessidade de mudar seu Banco de Dados
-você altera somente um arquivo*/
-?>
+  <?php
+
+$conexao = mysqli_connect("leitor.mysql.dbaas.com.br", "leitor", "leitorBanco@12", "leitor");
+  // $conexao = mysqli_connect("localhost:3306", "root", "Bd@Home2019!", "estacionamento");  
+
+    if (!$conexao) {
+        // echo "Error: Unable to connect to MySQL." . PHP_EOL;
+        // echo "<br>Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+        // echo "<br>Debugging error: " . mysqli_connect_error() . PHP_EOL;
+        exit;
+    }
+
+    // echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
+    // echo "Host information: " . mysqli_get_host_info($conexao) . PHP_EOL;
+    ?>
