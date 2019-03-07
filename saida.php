@@ -52,7 +52,7 @@ $data = date("d/m/Y");
         <label for="input-id" class="col-sm-2">CNPJ</label>
         <input name="cnpj" id="cnpj"readonly style="background-color:#cecece;" class="btn"><br> <br> 
 
-        <button type="submit" class="btn btn-large btn-block btn-success" id="enviar">Imprimir</button>
+        <button type="submit" class="btn btn-large btn-block btn-success" id="enviar">Salvar</button>
         
     </form>
     </div>

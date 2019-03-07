@@ -20,6 +20,16 @@ $(function(){
   // $('#hentrada').attr('value','14:15');
   // $('#hsaida').attr('value','15:45');
 
+  $('#enviar').click(function () { 
+    $('.sucesso').css('display','block');
+    
+  });
+
+  $('.sucesso').mouseleave(function () { 
+    $(this).fadeOut('slow');
+  });
+
+
 
   /** Manual */
   $('#formManual').submit(function (e) { 
@@ -41,16 +51,6 @@ $(function(){
   });
 
   });
-
-  $('#enviar').click(function () { 
-    $('.sucesso').css('display','block');
-    
-  });
-
-  $('.sucesso').mouseleave(function () { 
-    $(this).fadeOut('slow');
-  });
-
 
   /** Entrada */
   $('#formEntrada').submit(function (e) { 
@@ -83,20 +83,20 @@ $('#consulta').submit(function (e) {
 
 $.ajax({
   type: "POST",
-  url: "php/saida.php",
+  url: "php/select/select.php",
   data: txt,
   dataType: "json",
   success: function (response) {
     $('#placa').val(placa);
     $('#inputdate').val(response.data);
-    $('#hentrada').val(response.hentrada);
-    $('#hsaida').val(response.hsaida);
-    $('#dinheiro').val(response.dinheiro);
+    $('#hentrada').val(response.entrada);
+    $('#hsaida').val(response.saida);
+    $('#dinheiro').val(response.valor);
     $('#cnpj').val(response.cnpj);
 console.log(txt);
   },
   error: function(){
-    $('.sucesso').html('Erro ao cadastrar Veiculo <br> Por favor verifique se todos so campos estão preenchidos corretamente');
+    $('.sucesso').html('Erro ao consultar Veiculo digite novamente a placa');
   }
 });
 
@@ -104,24 +104,24 @@ console.log(txt);
 
 
 
-  // /** Saida */
-  // $('#formSaida').submit(function (e) { 
-  //   e.preventDefault();
-  //   var txt = $(this).serialize();
+  /** Saida */
+  $('#formSaida').submit(function (e) { 
+    e.preventDefault();
+    var txt = $(this).serialize();
 
-  // $.ajax({
-  //   type: "POST",
-  //   url: "php/saida.php",
-  //   data: txt,
-  //   dataType: "json",
-  //   success: function (response) {
-  //     $('.sucesso').html('Cadastro Realizado com Sucesso: <br>'+ 'placa : '+response.placa+ '<br>Data :'+response.data+ '<br>Entrada :'+response.hentrada);
+  $.ajax({
+    type: "POST",
+    url: "php/update/update.php",
+    data: txt,
+    dataType: "json",
+    success: function (response) {
+      $('.sucesso').html('Cadastro Realizado com Sucesso: <br>'+ 'placa : '+response.placa+ '<br>Data :'+response.data+ '<br>Entrada :'+response.hentrada+ '<br>Saida :'+response.hsaida+ '<br>valor :'+response.dinheiro+'<button>imprimir</button>');
 
-  //   },
-  //   error: function(){
-  //     $('.sucesso').html('Erro ao cadastrar Veiculo <br> Por favor verifique se todos so campos estão preenchidos corretamente');
-  //   }
-  // });
+    },
+    error: function(){
+      $('.sucesso').html('Erro ao cadastrar Veiculo <br> Por favor verifique se todos so campos estão preenchidos corretamente');
+    }
+  });
 
-  // });
+  });
 });
