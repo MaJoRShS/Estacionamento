@@ -2,20 +2,25 @@
 
 include '../conexao.php';
 date_default_timezone_set('America/Sao_Paulo');
-
+$data = date("d/m/Y");
+$saida = date("H:i");
+$_POST['data'] = $data;
+$_POST['saida'] =$saida;
 $cnpj = '99.999.999/9999-99'; 
-$placa = $_POST['placa'];
+$placa = $_POST['pesquisa'];
 
 
-$sql=" SELECT * FROM carros WHERE placa = '$placa' ";
+
+$sql=" SELECT * FROM carros WHERE placa = '$placa'  ";
 $result=mysqli_query($conexao,$sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-          $placa = $row['placa'];
-          $data =  $row['data'];
-          echo $entrada = $row['entrada'];
+        $id = $row['id'];
+        $placa = $row['placa'];
+        $data =  $row['data'];
+        $entrada = $row['entrada'];
     }
 } else {
     // echo "0 rows";
@@ -23,12 +28,9 @@ if ($result->num_rows > 0) {
 }
 mysqli_close($conexao);
 
-
-$data = date("d/m/Y");
-$saida = date("H:i");
-$_POST['data'] = $data;
 $_POST['entrada'] = $entrada;
-$_POST['saida'] =$saida;
+
+
 function calcularDiferenca($hora_inicial, $hora_final) {
 
     $i = 1;
@@ -113,10 +115,13 @@ function calcularDiferenca($hora_inicial, $hora_final) {
     }else if($tempo >= "06::00"){
         $dinheiro = '30,00';
     }
-
-$_POST['cnpj'] = $cnpj;
-$_POST['tempo'] = $tempo;
-$_POST['valor'] = $dinheiro;
+   
+   
+    
+    $_POST['id'] = $id;
+    $_POST['tempo'] = $tempo;
+    $_POST['valor'] = $dinheiro;
+    $_POST['cnpj'] = $cnpj;
 
 echo json_encode($_POST);
 ?>

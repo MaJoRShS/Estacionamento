@@ -27,14 +27,13 @@ $data = date("d/m/Y");
 <form  method="post" id="consulta">
     <label for="input-id" class="col-sm-2">Placa</label>
     <input name="pesquisa" id="pesquisa" class="btn" placeholder="Digite a Placa Aqui" required="">
-    
-    
-    <button type="button" class="btn btn-large btn-large btn-block btn-success">Pesquisar</button>
+    <button type="button" class="btn btn-large btn-large  btn-success">Pesquisar</button>
 </form>
 
 <div class="content" style="display:none;">
 <form  method="POST" id="formSaida"><!-- action="insert.php" -->
     <label for="placa" class="col-sm-2" maxlength="8" size="8">Placa</label>
+    <input name="id" id="id" class="btn" hidden>
         <input name="placa" id="placa" class="btn" placeholder="Digite a Placa Aqui" required=""><br><br> 
 
         <label for="input-id" class="col-sm-2">Data</label>
@@ -56,7 +55,7 @@ $data = date("d/m/Y");
         
     </form>
     </div>
-    <div class="sucesso"></div>
+    <div class="sucesso" ></div>
     <br>
     
 

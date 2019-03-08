@@ -25,9 +25,9 @@ $(function(){
     
   });
 
-  $('.sucesso').mouseleave(function () { 
-    $(this).fadeOut('slow');
-  });
+  // $('.sucesso').mouseleave(function () { 
+  //   $(this).fadeOut('slow');
+  // });
 
 
 
@@ -87,6 +87,7 @@ $.ajax({
   data: txt,
   dataType: "json",
   success: function (response) {
+    $('#id').val(response.id);
     $('#placa').val(placa);
     $('#inputdate').val(response.data);
     $('#hentrada').val(response.entrada);
