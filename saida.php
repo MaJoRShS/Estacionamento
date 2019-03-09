@@ -13,7 +13,7 @@ $data = date("d/m/Y");
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css\bootstrap.min.css">
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
@@ -50,12 +50,12 @@ $data = date("d/m/Y");
         
         <label for="input-id" class="col-sm-2">CNPJ</label>
         <input name="cnpj" id="cnpj"readonly style="background-color:#cecece;" class="btn"><br> <br> 
-
         <button type="submit" class="btn btn-large btn-block btn-success" id="enviar">Salvar</button>
         
     </form>
     </div>
-    <div class="sucesso" ></div>
+    <div class="sucesso col-6 alert alert-dismissible fade show" role="alert">
+    </div>
     <br>
     
 
@@ -69,6 +69,7 @@ $data = date("d/m/Y");
 
     <script src="jquery-3.3.1.min.js"></script>
     <script src="jquery.mask.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

@@ -24,7 +24,7 @@ if ($result->num_rows > 0) {
     }
 } else {
     // echo "0 rows";
-    $erro = ['erro'];
+    $erro = 'Erro muitos registros sem saida';
 }
 mysqli_close($conexao);
 
@@ -66,7 +66,7 @@ function calcularDiferenca($hora_inicial, $hora_final) {
     $tempo = calcularDiferenca($entrada,$saida);
 
     
-    if ($tempo >= '00:15:00' && $tempo <= '00:30:00') {
+    if ($tempo <= '00:15:00' && $tempo <= '00:30:00') {
         $dinheiro = '2,50';
     } else if($tempo >= '00:30:00' && $tempo <= '00:45:00') {
         $dinheiro = '5,00';
@@ -110,9 +110,9 @@ function calcularDiferenca($hora_inicial, $hora_final) {
         $dinheiro = '27,00';
     }else if($tempo >= "05:30:00" && $tempo <= "05:45:00"){
         $dinheiro = '28,00';
-    }else if($tempo >= "05:45:00" && $tempo <= "06::00"){
+    }else if($tempo >= "05:45:00" && $tempo <= "06:00"){
         $dinheiro = '29,00';
-    }else if($tempo >= "06::00"){
+    }else if($tempo >= "06:00"){
         $dinheiro = '30,00';
     }
    
