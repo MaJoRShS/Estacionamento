@@ -116,7 +116,7 @@ console.log(txt);
     data: txt,
     dataType: "json",
     success: function (response) {
-      $('.sucesso').html('Cadastro Realizado com Sucesso: <br>'+ 'placa : '+response.placa+ '<br>Data :'+response.data+ '<br>Entrada :'+response.hentrada+ '<br>Saida :'+response.hsaida+ '<br>valor :'+response.dinheiro+ '<button tyep="button" class="close" data-dismiss="alert" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>  <input class="btn" type="button" name="imprimir" value="Imprimir" onclick="window.print();">');
+      $('.sucesso').html('Cadastro Realizado com Sucesso: <br>'+ 'placa : '+response.placa+ '<br>Data :'+response.data+ '<br>Entrada :'+response.hentrada+ '<br>Saida :'+response.hsaida+ '<br>valor :'+response.dinheiro+ '<button tyep="button" class="close" data-dismiss="alert" aria-label="Fechar"><span aria-hidden="true">&times;</span></button> ');
     },
     error: function(){
       $('.sucesso').html('Erro ao cadastrar Veiculo <br> Por favor verifique se todos so campos estão preenchidos corretamente');

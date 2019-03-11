@@ -2,16 +2,13 @@
 
 include '../conexao.php';
 date_default_timezone_set('America/Sao_Paulo');
-$data = date("d/m/Y");
 $saida = date("H:i");
-$_POST['data'] = $data;
 $_POST['saida'] =$saida;
 $cnpj = '99.999.999/9999-99'; 
 $placa = $_POST['pesquisa'];
 
 
-
-$sql=" SELECT * FROM carros WHERE placa = '$placa'  ";
+$sql=" SELECT * FROM carros WHERE placa = '$placa' ";
 $result=mysqli_query($conexao,$sql);
 
 if ($result->num_rows > 0) {
@@ -122,6 +119,8 @@ function calcularDiferenca($hora_inicial, $hora_final) {
     $_POST['tempo'] = $tempo;
     $_POST['valor'] = $dinheiro;
     $_POST['cnpj'] = $cnpj;
-
+    $data_f = $data;
+    $data_f = date("d-m-Y");
+    $_POST['data'] = $data_f;
 echo json_encode($_POST);
 ?>
