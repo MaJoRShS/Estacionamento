@@ -14,11 +14,6 @@ $(function(){
 
   
   $('#dinheiro').mask('00,00');
-  
-  // $('#placa').attr('value', 'kyu-2708');
-  // $('#inputdate').attr('value','2019-02-02');
-  // $('#hentrada').attr('value','14:15');
-  // $('#hsaida').attr('value','15:45');
 
   $('#enviar').click(function () { 
     $('.sucesso').css('display','block');
@@ -38,11 +33,11 @@ $(function(){
 
   $.ajax({
     type: "POST",
-    url: "manual.php",
+    url: "/php/insert/insereManual.php",
     data: txt,
     dataType: "json",
     success: function (response) {
-      $('.sucesso').html('Cadastro Realizado com Sucesso: <br>'+ 'placa : '+response.placa+ '<br>Data :'+response.data+ '<br>Entrada :'+response.hentrada + '<br>saida : '+ response.hsaida +' <br>CNPJ :' + response.cnpj);
+      $('.sucesso').html('Cadastro Realizado com Sucesso: <br>'+ 'placa : '+response.placa+ '<br>Data :'+response.data+ '<br>Entrada :'+response.entrada + '<br>saida : '+ response.saida +' <br>CNPJ :' + response.cnpj + '<button tyep="button" class="close" data-dismiss="alert" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>');
 
     },
     error: function(){

@@ -32,10 +32,10 @@ $data = date("d/m/Y");
         <input name="data" id="inputdate" class="btn" readonly value="<?php echo $data;?>"><br> <br>        
 
         <label for="input-id" class="col-sm-2">Entrada</label>
-        <input type="time" name="hentrada" id="hentrada" class="btn">
+        <input type="time" name="entrada" id="entrada" class="btn">
 
         <label for="input-id" class="col-sm-2">Saida</label>
-        <input type="time" name="hsaida" id="hsaida" class="btn"><br><br> 
+        <input type="time" name="saida" id="saida" class="btn"><br><br> 
 
         <label for="input-id" class="col-sm-2">Valor</label>
         <input type="text" name="dinheiro" id="dinheiro" size="5" class="btn" Placeholder="R$"><br><br> 
@@ -47,7 +47,7 @@ $data = date("d/m/Y");
         
     </form>
     </div>
-    <div class="sucesso"></div>
+    <div class="sucesso col-6 alert alert-dismissible fade show" role="alert"></div>
     <br>
     
 
@@ -61,6 +61,7 @@ $data = date("d/m/Y");
 
     <script src="jquery-3.3.1.min.js"></script>
     <script src="jquery.mask.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
