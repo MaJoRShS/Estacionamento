@@ -54,10 +54,14 @@ $data = date("d/m/Y");
         
     </form>
     </div>
-    <div class="sucesso col-6 alert alert-dismissible fade show" role="alert">
+    <div class="sucesso col-6 alert alert-dismissible fade show" id="sucesso" role="alert">
     </div>
     <br>
-    
+    <br> 
+    <button onclick="printDiv('sucesso')" class="hide">Imprimir</button>
+
+
+
 
     <nav class="nav justify-content-center">
           <a class="nav-link" href="entrada.php">Entrada</a>
@@ -71,7 +75,14 @@ $data = date("d/m/Y");
     <script src="jquery.mask.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="main.js"></script>
+    <script>
+		function printDiv(divName){
+			var printContents = document.getElementById(divName).innerHTML;
+			var originalContents = document.body.innerHTML;
+			document.body.innerHTML = printContents;
+			window.print();
+			document.body.innerHTML = originalContents;
+		}
+	</script>
   </body>
 </html>
-
-<!-- Bd@Home2019! -->
