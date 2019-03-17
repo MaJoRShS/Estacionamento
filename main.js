@@ -21,28 +21,18 @@ $(function(){
   });
 
 
-  function printDiv(divName){
-    var printContents = document.getElementById(divName).innerHTML;
-    var originalContents = document.body.innerHTML;
-    document.body.innerHTML = printContents;
-    window.print();
-    document.body.innerHTML = originalContents;
-  }
-
   $('.hide').css('display','none');
 
-  $('#formSaida').click(function () { 
+  $('#enviar').click(function () { 
     $('.hide').css('display','');
     
   });
 
-
-
-  // $('.sucesso').mouseleave(function () { 
-  //   $(this).fadeOut('slow');
-  // });
-
-
+  $('#enviar').click(function () { 
+    $('.hide').css('display','');
+    
+  });
+  
 
   /** Manual */
   $('#formManual').submit(function (e) { 
@@ -77,7 +67,7 @@ $(function(){
     data: txt,
     dataType: "json",
     success: function (response) {
-      $('.sucesso').html('Cadastro Realizado com Sucesso: <br>'+ 'placa : '+response.placa+ '<br>Data :'+response.data+ '<br>Entrada :'+response.hentrada+ '<button tyep="button" class="close" data-dismiss="alert" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>');
+      $('.sucesso').html('Cadastro Realizado com Sucesso: <br>'+ 'placa : '+response.placa+ '<br>Data :'+response.data+ '<br>Entrada :'+response.entrada+ '<button tyep="button" class="close" data-dismiss="alert" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>');
     },
     error: function(){
       $('.sucesso').html('Erro ao cadastrar Veiculo');
@@ -103,8 +93,8 @@ $.ajax({
     $('#id').val(response.id);
     $('#placa').val(placa);
     $('#inputdate').val(response.data);
-    $('#hentrada').val(response.entrada);
-    $('#hsaida').val(response.saida);
+    $('#entrada').val(response.entrada);
+    $('#saida').val(response.saida);
     $('#dinheiro').val(response.valor);
     $('#cnpj').val(response.cnpj);
 console.log(txt);
@@ -129,7 +119,7 @@ console.log(txt);
     data: txt,
     dataType: "json",
     success: function (response) {
-      $('.sucesso').html('Cadastro Realizado com Sucesso: <br>'+ 'placa : '+response.placa+ '<br>Data :'+response.data+ '<br>Entrada :'+response.hentrada+ '<br>Saida :'+response.hsaida+ '<br>valor :'+response.dinheiro+ '<button tyep="button" class="close" data-dismiss="alert" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>');
+      $('.sucesso').html('Cadastro Realizado com Sucesso: <br>'+ 'placa : '+response.placa+ '<br>Data :'+response.data+ '<br>Entrada :'+response.entrada+ '<br>Saida :'+response.saida+ '<br>valor :'+response.dinheiro+ '<button tyep="button" class="close" data-dismiss="alert" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>');
     },
     error: function(){
       $('.sucesso').html('Erro ao cadastrar Veiculo <br> Por favor verifique se todos so campos estão preenchidos corretamente');

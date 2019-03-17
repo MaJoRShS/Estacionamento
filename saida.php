@@ -40,10 +40,10 @@ $data = date("d/m/Y");
         <input name="data" id="inputdate" class="btn" ><br> <br>        
 
         <label for="input-id" class="col-sm-2">Entrada</label>
-        <input type="time" name="hentrada" id="hentrada" class="btn">
+        <input type="time" name="entrada" id="entrada" class="btn">
 
         <label for="input-id" class="col-sm-2">Saida</label>
-        <input type="time" name="hsaida" id="hsaida" class="btn"><br><br> 
+        <input type="time" name="saida" id="saida" class="btn"><br><br> 
 
         <label for="input-id" class="col-sm-2">Valor</label>
         <input type="text" name="dinheiro" id="dinheiro" size="5" class="btn" Placeholder="R$"><br><br> 

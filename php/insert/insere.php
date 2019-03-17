@@ -7,7 +7,7 @@
     $data = date("Y-m-d");
     $hora = date("H:i");
     $_POST['data'] = $data;
-    $_POST['hentrada'] = $hora;
+    $_POST['entrada'] = $hora;
     
     $sql = " INSERT INTO carros(id, placa, data, entrada) 
     VALUES (null,'$placa','$data','$hora') ";

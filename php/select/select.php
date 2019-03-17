@@ -4,7 +4,7 @@ include '../conexao.php';
 date_default_timezone_set('America/Sao_Paulo');
 $saida = date("H:i");
 $_POST['saida'] =$saida;
-$cnpj = '99.999.999/9999-99'; 
+$cnpj = '31.134.258/0001-04'; 
 $placa = $_POST['pesquisa'];
 
 
@@ -38,7 +38,7 @@ function calcularDiferenca($hora_inicial, $hora_final) {
     foreach($tempos as $tempo) {
     $segundos = 0;
     
-    list($h, $m, $s) = explode(':', $tempo);
+    @list($h, $m, $s) = explode(':', $tempo);
     
     $segundos += $h * 3600;
     $segundos += $m * 60;
@@ -107,10 +107,24 @@ function calcularDiferenca($hora_inicial, $hora_final) {
         $dinheiro = '27,00';
     }else if($tempo >= "05:30:00" && $tempo <= "05:45:00"){
         $dinheiro = '28,00';
-    }else if($tempo >= "05:45:00" && $tempo <= "06:00"){
+    }else if($tempo >= "05:45:00" && $tempo <= "06:00:00"){
         $dinheiro = '29,00';
-    }else if($tempo >= "06:00"){
+    }else if($tempo >= "06:00:00" && $tempo <= "06:15:00"){
         $dinheiro = '30,00';
+    }else if($tempo >= "06:15:00" && $tempo <= "06:30:00"){
+        $dinheiro = '31,00';
+    }else if($tempo >= "06:30:00" && $tempo <= "06:45:00"){
+        $dinheiro = '32,00';
+    }else if($tempo >= "06:45:00" && $tempo <= "07:00:00"){
+        $dinheiro = '33,00';
+    }else if($tempo >= "07:00:00" && $tempo <= "07:15:00"){
+        $dinheiro = '34,00';
+    }else if($tempo >= "07:15:00" && $tempo <= "07:30:00"){
+        $dinheiro = '35,00';
+    }else if($tempo >= "07:30:00" && $tempo <= "07:45:00"){
+        $dinheiro = '36,00';
+    }else{
+        $dinheiro = '37,00';
     }
    
    
