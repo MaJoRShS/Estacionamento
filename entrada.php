@@ -25,9 +25,16 @@ $data = date("d/m/Y");
 
 <div class="content">
 <form  method="POST" id="formEntrada"><!-- action="insert.php" -->
-    <label for="placa" class="col-sm-2" maxlength="8" size="8">Placa</label>
-        <input name="placa" id="placa" class="btn" placeholder="Digite a Placa Aqui" required=""><br><br> 
-
+    <label for="placa" class="col-sm-2" maxlength="8" size="8">Placa</label><br>
+        <input name="placa" id="placa" class="btn" placeholder="Digite a Placa aqui" required=""><br><br> 
+        
+        <label for="placa" class="col-sm-6">Nome do Cliente</label><br>
+        <input name="name" id="name" class="btn" placeholder="Digite o Nome Aqui" required=""><br><br>
+        
+        <label for="placa" class="col-sm-6">CPF do Cliente</label><br>
+        <input name="cpf" id="cpf" class="btn" placeholder="Digite o CPF Aqui" required=""><br><br>
+        
+        
         <button type="submit" class="btn btn-large btn-block btn-success" id="enviar">Enviar</button>
         
     </form>

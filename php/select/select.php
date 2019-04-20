@@ -16,6 +16,8 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         $id = $row['id'];
         $placa = $row['placa'];
+        $name = $row['name'];
+        $cpf = $row['cpf'];
         $data =  $row['data'];
         $entrada = $row['entrada'];
     }
@@ -127,7 +129,7 @@ function calcularDiferenca($hora_inicial, $hora_final) {
         $dinheiro = '37,00';
     }
    
-   
+   $name = ucwords($name);
     
     $_POST['id'] = $id;
     $_POST['tempo'] = $tempo;
@@ -136,5 +138,7 @@ function calcularDiferenca($hora_inicial, $hora_final) {
     $data_f = $data;
     $data_f = date("d-m-Y");
     $_POST['data'] = $data_f;
+    $_POST['name'] = $name;
+    $_POST['cpf'] = $cpf;
 echo json_encode($_POST);
 ?>

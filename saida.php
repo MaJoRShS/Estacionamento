@@ -39,6 +39,12 @@ $data = date("d/m/Y");
         <label for="input-id" class="col-sm-2">Data</label>
         <input name="data" id="inputdate" class="btn" ><br> <br>        
 
+        <label for="input-id" class="col-sm-2">Cliente</label>
+        <input type="text" name="name" id="name" class="btn col-sm-8"><br> <br>
+
+        <label for="input-id" class="col-sm-2">CPF</label>
+        <input type="text" name="cpf" id="cpf" class="btn"><br> <br>
+
         <label for="input-id" class="col-sm-2">Entrada</label>
         <input type="time" name="entrada" id="entrada" class="btn">
 
@@ -54,7 +60,7 @@ $data = date("d/m/Y");
         
     </form>
     </div>
-    <div class="sucesso col-6 alert alert-dismissible fade show" id="sucesso" role="alert">
+    <div class="sucesso col-12 alert alert-dismissible fade show" id="sucesso" role="alert">
     </div>
     <br>
     <br> 
