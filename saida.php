@@ -56,6 +56,15 @@ $data = date("d/m/Y");
         
         <label for="input-id" class="col-sm-2">CNPJ</label>
         <input name="cnpj" id="cnpj"readonly style="background-color:#cecece;" class="btn"><br> <br> 
+        
+        <?php
+        $variable [] = [1,2,3];
+        foreach ($variable as $key => $value) {
+         echo " <label for='\"servico'\" class='\"col-sm-6'\">Serviço</label><br>";
+         echo " <input  name='\"servico'\" id='\"servico'\" class='\"form-control col-sm-6 bg-secondary'\" value='\"Estacionamento'\" readonly><br><br>";
+        }
+          
+        ?>
         <button type="submit" class="btn btn-large btn-block btn-success" id="enviar">Salvar</button>
         
     </form>
@@ -77,7 +86,7 @@ $data = date("d/m/Y");
         </nav>
 
 
-    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
     <script src="jquery.mask.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="main.js"></script>

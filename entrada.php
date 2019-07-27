@@ -1,5 +1,5 @@
 <?php 
-
+require_once'php/conexao.php';
 date_default_timezone_set('America/Sao_Paulo');
 $data = date("d/m/Y");
 
@@ -25,15 +25,54 @@ $data = date("d/m/Y");
 
 <div class="content">
 <form  method="POST" id="formEntrada"><!-- action="insert.php" -->
-    <label for="placa" class="col-sm-2" maxlength="8" size="8">Placa</label><br>
-        <input name="placa" id="placa" class="btn" placeholder="Digite a Placa aqui" required=""><br><br> 
+    <label for="placa" class="col-sm-12" maxlength="8" size="8">Placa
+        <input name="placa" id="placa" class="btn col-sm-12" placeholder="Digite a Placa aqui" required="">
+        </label><br>
+
+        <label for="placa" class="col-sm-12">Nome do Cliente
+        <input name="name" id="name" class="btn col-sm-12" placeholder="Digite o Nome Aqui" required="">
+        </label><br>
         
-        <label for="placa" class="col-sm-6">Nome do Cliente</label><br>
-        <input name="name" id="name" class="btn" placeholder="Digite o Nome Aqui" required=""><br><br>
+        <label for="placa" class="col-sm-12">CPF do Cliente
+        <input name="cpf" id="cpf" class="btn col-sm-12" placeholder="Digite o CPF Aqui" required="" >
+        </label><br>
         
-        <label for="placa" class="col-sm-6">CPF do Cliente</label><br>
-        <input name="cpf" id="cpf" class="btn" placeholder="Digite o CPF Aqui" required=""><br><br>
+        <?php
+				$sql=" SELECT * FROM services";
+        $result=mysqli_query($conexao,$sql);
         
+        if ($result->num_rows > 0) 
+        {
+          echo "<label for='servico' class='col-sm-12'><br><input  name='servico' id='servico' class='btn col-sm-12 btn-secondary' value='Estacionamento' readonly></label>";
+        while($row = $result->fetch_assoc()) {
+          echo "<label for='servico' class='col-sm-12'><br><input  name='servico' id='servico' class='btn col-sm-12 btn-secondary' value='{$row['name']}' readonly></label>";
+      }
+      echo "</option>";
+      echo "</select></br></br>";
+  } else {
+      echo "<label for='servico' class='col-sm-12'><br><input  name='servico' id='servico' class='btn col-sm-12 btn-secondary' value='Estacionamento' readonly></label>";
+  }
+  mysqli_close($conexao);
+        
+
+
+					?>
+        
+
+
+
+
+
+
+
+
+
+
+        <!-- <label for="servico" class="col-sm-12">Serviço
+        <input  name="servico" id="servico" class="btn col-sm-12 btn-secondary" value="Estacionamento" readonly>
+        <h5 class="col-sm-12" name="more" id="more">+</h5>
+        </label><br> -->
+
         
         <button type="submit" class="btn btn-large btn-block btn-success" id="enviar">Enviar</button>
         
@@ -53,7 +92,7 @@ $data = date("d/m/Y");
         </nav>
 
 
-    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
     <script src="jquery.mask.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="main.js"></script>

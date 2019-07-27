@@ -32,7 +32,7 @@
   </tbody>
 </table>
 
-    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
     <script src="jquery.mask.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="main.js"></script>
