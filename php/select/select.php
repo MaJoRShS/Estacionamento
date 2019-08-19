@@ -11,7 +11,7 @@ $placa = $_POST['pesquisa'];
 $sql=" SELECT * FROM carros WHERE placa = '$placa' ";
 $result=mysqli_query($conexao,$sql);
 
-if ($result->num_rows > 0) {
+if ($result->affected_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         $id = $row['id'];

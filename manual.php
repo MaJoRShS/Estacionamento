@@ -13,8 +13,8 @@ $data = date("d/m/Y");
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css\bootstrap.min.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
       
@@ -59,10 +59,10 @@ $data = date("d/m/Y");
         </nav>
 
 
-    <script src="jquery-3.4.1.min.js"></script>
-    <script src="jquery.mask.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="main.js"></script>
+    <script src="css/main.js"></script>
   </body>
 </html>
 

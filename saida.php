@@ -13,8 +13,8 @@ $data = date("d/m/Y");
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css\bootstrap.min.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
       
@@ -60,8 +60,8 @@ $data = date("d/m/Y");
         <?php
         $variable [] = [1,2,3];
         foreach ($variable as $key => $value) {
-         echo " <label for='\"servico'\" class='\"col-sm-6'\">Serviço</label><br>";
-         echo " <input  name='\"servico'\" id='\"servico'\" class='\"form-control col-sm-6 bg-secondary'\" value='\"Estacionamento'\" readonly><br><br>";
+         echo " <label for='servico' class='col-sm-6'>Serviço</label><br>";
+         echo " <input  name='servico' id='servico' class='form-control col-sm-6 bg-secondary' value='Estacionamento' readonly><br><br>";
         }
           
         ?>
@@ -86,10 +86,10 @@ $data = date("d/m/Y");
         </nav>
 
 
-    <script src="jquery-3.4.1.min.js"></script>
-    <script src="jquery.mask.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
     <script>
 		function printDiv(divName){
 			var printContents = document.getElementById(divName).innerHTML;
