@@ -1,5 +1,6 @@
 <?php
-require_once 'php/conexao.php';
+// require_once 'php/conexao.php';
+require "vendor/autoload.php";
 date_default_timezone_set('America/Sao_Paulo');
 $data = date("d/m/Y");
 ?>
@@ -38,39 +39,13 @@ $data = date("d/m/Y");
       </label><br>
 
       <?php
-$sql = " SELECT * FROM services";
-$result = mysqli_query($conexao, $sql);
 
-if ($result->num_rows > 0) {
-    echo "<label for='servicos' class='col-sm-12'>Serviços";
-    echo "<select class='form-control form-control-xm'><br>";
-    while ($row = $result->fetch_assoc()) {
-        echo "<option value='{$row['service']}'>{$row['name']}";
-        // echo "<label for='{$row['service']}' class='col-sm-12'><br><input  name='servico' id='servico' class='btn col-sm-12 btn-secondary' value='{$row['name']}' readonly></label>";
-    }
-    echo "</option>";
-    echo "</select><br><br>";
-} else {
-    echo "<label for='servico' class='col-sm-12'><br><input  name='servico' id='servico' class='btn col-sm-12 btn-secondary'readonly></label>";
-}
-mysqli_close($conexao);
+  // $service =1;
+    $select = new Select;
+    $select->list();
+    ?>
 
-?>
-
-
-
-
-
-
-
-
-
-
-
-      <!-- <label for="servico" class="col-sm-12">Serviço
-        <input  name="servico" id="servico" class="btn col-sm-12 btn-secondary" value="Estacionamento" readonly>
         <h5 class="col-sm-12" name="more" id="more">+</h5>
-        </label><br> -->
 
 
       <button type="submit" class="btn btn-large btn-block btn-success" id="enviar">Enviar</button>

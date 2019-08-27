@@ -23,6 +23,27 @@ class Select extends Connection
         }
     }
 
+
+    public function List()
+    {
+        $conn = self::connect();
+        $result = $conn->query("SELECT * from services");
+        $result->execute();
+
+        if ($result->rowCount() >= 1) {
+            echo "<label for='servico' class='col-sm-12'>Serviço </label><select  name='servico' id='servico' class='btn col-sm-12 btn-secondary'>";
+            while ($row = $result->fetch(PDO::FETCH_OBJ)) {
+                echo "<option id='services'>{$row->name}  -  {$row->value}</option>";
+            }
+            echo "</select>";
+
+        } else {
+            $result->getMessage();
+            echo $result;
+        }
+    }
+
+
     public function Service($service)
     {
         $conn = self::connect();

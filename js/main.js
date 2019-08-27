@@ -20,6 +20,11 @@ $(function(){
   
   $('#dinheiro').mask('00,00');
 
+  $('#servico').click(function (e) { 
+    e.preventDefault();
+    $('#service').append('<?php $select->List(); ?>');
+  });
+
   $('#enviar').click(function () { 
     $('.sucesso').css('display','block');
     

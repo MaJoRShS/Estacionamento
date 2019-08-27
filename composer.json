@@ -1,0 +1,13 @@
+{
+    "name": "m_j0r/estacionamento",
+    "authors": [
+        {
+            "name": "MaJoRShS",
+            "email": "lukas.mr@hotmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "files": ["crud/classConnect.php","crud/classInsert.php","crud/classSelect.php"]
+    }
+}
