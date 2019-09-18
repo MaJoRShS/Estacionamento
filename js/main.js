@@ -20,11 +20,6 @@ $(function(){
   
   $('#dinheiro').mask('00,00');
 
-  $('#servico').click(function (e) { 
-    e.preventDefault();
-    $('#service').append('<?php $select->List(); ?>');
-  });
-
   $('#enviar').click(function () { 
     $('.sucesso').css('display','block');
     
@@ -43,12 +38,6 @@ $(function(){
     
   });
   
-
-  // $('#more').click(function (e) { 
-  //   e.preventDefault();
-  //   $('#servico').append('<label for="servico" class="col-sm-12"><br><input  name="servico" id="servico" class="btn col-sm-12 btn-secondary" value="Estacionamento" readonly></label>');
-    
-  // });
 
   /** Manual */
   $('#formManual').submit(function (e) { 
@@ -79,11 +68,11 @@ $(function(){
 
   $.ajax({
     type: "POST",
-    url: "/php/insert/insere.php",
+    url: "php/insert/insere.php",
     data: txt,
     dataType: "json",
     success: function (response) {
-      $('.sucesso').html('Recibo (Via do Cliente) <br> V&K Estacionamento e Lava-Rapido <br> CNPJ :' + response.cnpj + '<br> Tel : (11) 2356-7998 <br> Cel : (11) 9.4284-0967 <br> End: R. Três de Dezembro nº 240,Rudge Ramos - SBC - SP <br> Operador : Victor  <br> Data :'+ response.data +  '<br> Recebemos de : '+ response.name + ' <br>CPF :' + response.cpf +  '<button tyep="button" class="close" data-dismiss="alert" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>');
+      $('.sucesso').html('Recibo (Via do Cliente) <br> V&K Estacionamento e Lava-Rapido <br> CNPJ :' + response.cnpj + '<br> Tel : (11) 2356-7998 <br> Cel : (11) 9.4284-0967 <br> End: R. Três de Dezembro nº 240,Rudge Ramos - SBC - SP <br> Operador : Victor  <br> Data :'+ response.data +  '<br> Recebemos de : '+ response.name + ' <br>CPF :' + response.cpf +  ' <button tyep="button" class="close" data-dismiss="alert" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>');
     },
     error: function(){
       $('.sucesso').html('Erro ao cadastrar Veiculo');
@@ -102,7 +91,7 @@ $('#consulta').submit(function (e) {
 
 $.ajax({
   type: "POST",
-  url: "php/select/select.php",
+  url: "/php/select/select.php",
   data: txt,
   dataType: "json",
   success: function (response) {

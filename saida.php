@@ -2,7 +2,7 @@
 
 date_default_timezone_set('America/Sao_Paulo');
 $data = date("d/m/Y");
-
+require "vendor/autoload.php";
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -20,18 +20,25 @@ $data = date("d/m/Y");
       
 
       <h1>Estacionamento do Victor</h1>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      
+      
+      
+      <nav class="nav justify-content-center">
+          <a class="nav-link" href="entrada.php">Entrada</a>
+          <a class="nav-link" href="saida.php">Saida</a>
+          <a class="nav-link" href="manual.php">Manual</a>
+          <a class="nav-link" href="index.php">Home</a>
+        </nav>
 <br><br>
 
-<form  method="post" id="consulta">
+<form  method="post" id="consulta" action="crud/classSelect.php">
     <label for="input-id" class="col-sm-2">Placa</label>
-    <input name="pesquisa" id="pesquisa" class="btn" placeholder="Digite a Placa Aqui" required="">
+    <input name="placa" id="placa" class="btn" placeholder="Digite a Placa Aqui" required="">
     <button type="button" class="btn btn-large btn-large  btn-success">Pesquisar</button>
 </form>
 
 <div class="content" style="display:none;">
-<form  method="POST" id="formSaida"><!-- action="insert.php" -->
+<form  method="POST" id="formSaida">
     <label for="placa" class="col-sm-2" maxlength="8" size="8">Placa</label>
     <input name="id" id="id" class="btn" hidden>
         <input name="placa" id="placa" class="btn" placeholder="Digite a Placa Aqui" required=""><br><br> 
@@ -58,13 +65,13 @@ $data = date("d/m/Y");
         <input name="cnpj" id="cnpj"readonly style="background-color:#cecece;" class="btn"><br> <br> 
         
         <?php
-        $variable [] = [1,2,3];
-        foreach ($variable as $key => $value) {
-         echo " <label for='servico' class='col-sm-6'>Serviço</label><br>";
-         echo " <input  name='servico' id='servico' class='form-control col-sm-6 bg-secondary' value='Estacionamento' readonly><br><br>";
-        }
-          
-        ?>
+    $select = new Select;
+    $select->listServices();
+    // $select->Carrs();
+
+
+
+  ?>
         <button type="submit" class="btn btn-large btn-block btn-success" id="enviar">Salvar</button>
         
     </form>
@@ -73,17 +80,9 @@ $data = date("d/m/Y");
     </div>
     <br>
     <br> 
+
+
     <button onclick="printDiv('sucesso')" class="hide">Imprimir</button>
-
-
-
-
-    <nav class="nav justify-content-center">
-          <a class="nav-link" href="entrada.php">Entrada</a>
-          <a class="nav-link" href="saida.php">Saida</a>
-          <a class="nav-link" href="manual.php">Manual</a>
-          <a class="nav-link" href="index.html">Home</a>
-        </nav>
 
 
     <script src="js/jquery-3.4.1.min.js"></script>

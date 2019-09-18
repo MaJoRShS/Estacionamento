@@ -1,8 +1,10 @@
 {
     "name": "m_j0r/estacionamento",
+    "description": "Estacionamento/Lava-Rapido",
+    "license": "MIT",
     "authors": [
         {
-            "name": "MaJoRShS",
+            "name": "Lucas M Rodrigues",
             "email": "lukas.mr@hotmail.com"
         }
     ],

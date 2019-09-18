@@ -20,8 +20,14 @@ $data = date("d/m/Y");
       
 
       <h1>Estacionamento do Victor</h1>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+      <nav class="nav justify-content-center">
+    <a class="nav-link" href="entrada.php">Entrada</a>
+    <a class="nav-link" href="saida.php">Saida</a>
+    <a class="nav-link" href="manual.php">Manual</a>
+    <a class="nav-link" href="index.php">Home</a>
+  </nav>
+
 
 <div class="content">
 <form  method="POST" id="formManual"><!-- action="insert.php" -->
@@ -49,15 +55,6 @@ $data = date("d/m/Y");
     </div>
     <div class="sucesso col-6 alert alert-dismissible fade show" role="alert"></div>
     <br>
-    
-
-    <nav class="nav justify-content-center">
-          <a class="nav-link" href="entrada.php">Entrada</a>
-          <a class="nav-link" href="saida.php">Saida</a>
-          <a class="nav-link" href="manual.php">Manual</a>
-          <a class="nav-link" href="index.html">Home</a>
-        </nav>
-
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
