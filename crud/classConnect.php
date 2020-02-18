@@ -1,7 +1,7 @@
 <?php
 
 define("user", "root");
-define("pass", "Bd@Home2019!");
+define("pass", "Bd@Home2020!");
 
 class Connection{
 
