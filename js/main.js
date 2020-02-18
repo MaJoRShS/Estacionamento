@@ -39,7 +39,7 @@ $(function(){
   });
   
 
-  /** Manual */
+  /** Manual Todos*/
   $('#formManual').submit(function (e) { 
     e.preventDefault();
     var txt = $(this).serialize();
