@@ -79,20 +79,6 @@ class Select extends Connection
         $result->bindValue(':placa', $placa);
         $result->execute();
         if ($result->rowCount() >= 1) {
-<<<<<<< Updated upstream
-            echo "<table class='table table-dark table-striped'><thead><tr><th scope='col'>ID</th><th scope='col'>Placa</th><th scope='col'>nome</th><th scope='col'>CPF</th><th scope='col'>Data</th><th scope='col'>Entrada</th><th scope='col'>Saida</th><th scope='col'>Valor</th></tr></thead><tbody></tr>";
-            while ($row = $result->fetch(PDO::FETCH_OBJ)) {
-                echo "<td>{$row->carr}</td>";
-                echo "<td>{$row->placa}</td>";
-                echo "<td>{$row->name}</td>";
-                echo "<td>{$row->cpf}</td>";
-                echo "<td>{$row->data}</td>";
-                echo "<td>{$row->entrada}</td>";
-                echo "<td>{$row->saida}</td>";
-                echo "<td>{$row->valor}</td></tr>";
-            }
-            echo "</tbody></table>";} else {
-=======
             // echo "<table class='table table-dark table-striped'><thead><tr><th scope='col'>ID</th><th scope='col'>Placa</th><th scope='col'>nome</th><th scope='col'>CPF</th><th scope='col'>Data</th><th scope='col'>Entrada</th><th scope='col'>Saida</th><th scope='col'>Valor</th></tr></thead><tbody></tr>";
             // while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                 // echo "<td>{$row->carr}</td>";
@@ -107,7 +93,6 @@ class Select extends Connection
             // echo "</tbody></table>";}
             return $row = $result->fetch(PDO::FETCH_ASSOC);
         }else {
->>>>>>> Stashed changes
             print "$result->getMessage()";
         }
     }
