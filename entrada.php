@@ -39,15 +39,12 @@ $data = date("d/m/Y");
       <label for="placa" class="col-sm-12">CPF do Cliente
         <input name="cpf" id="cpf" class="btn col-sm-12" placeholder="Digite o CPF Aqui" required="">
       </label><br>
-
+      <div class='form-group mb-4 col-lg-12'>
    <?php
-   
-    $select = new Select;
-    $select->listServices();
-    ?>
-
-
-
+      $select = new Select;
+      $select->listServices();
+  ?>
+</div>
       <button type="submit" class="btn btn-large btn-block btn-success" id="enviar">Enviar</button>
 
     </form>
@@ -72,6 +69,16 @@ $data = date("d/m/Y");
       window.print();
       document.body.innerHTML = originalContents;
     }
+
+    $('span.close').click(function(){
+    $('#placa').val("");
+    $('#name').val("");
+    $('#cpf').val("");
+    $('#service').val("");
+    $('.sucesso').fadeOut();
+    $('.hide').css('display','none');
+  });
+
   </script>
 </body>
 

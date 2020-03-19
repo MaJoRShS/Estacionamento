@@ -16,7 +16,7 @@
     $name = ucwords($name);
 
     $insert = new Insert;
-    $insert->entrada($cpf, $data, $hora, $name, $placa,$service); 
+    $insert->entrada($cpf, $data, $hora, $name, $placa, $service); 
 
     $select = new Select;
     $select->last();
