@@ -103,7 +103,6 @@ $(function () {
   //Pesquisa
   $('#consulta').submit(function (e) {
     e.preventDefault();
-    $('.content').css('display', '');
     var txt = $(this).serialize();
     var placa = $('input#pesquisa').val();
 
@@ -122,10 +121,11 @@ $(function () {
         $('#saida').val(response.saida);
         $('#dinheiro').val(response.valor);
         $('#cnpj').val(response.cnpj);
-        console.log(txt);
+        $('.content').css('display', '');
       },
       error: function () {
-        $('.sucesso').html('Erro ao consultar Veiculo digite novamente a placa');
+        $('.content').css('display', 'none');
+        alert("Erro : Nenhum Registro em aberto para a placa solicitada");
       }
     });
 
