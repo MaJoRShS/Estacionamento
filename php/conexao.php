@@ -1,7 +1,7 @@
   <?php
 
 
-  $conexao = mysqli_connect("localhost", "root", "Bd@Home2019!", "estacionamento");  
+  $conexao = mysqli_connect("localhost", "root", "Bd@Home2020!", "estacionamento");  
 
     // if (!$conexao) {
     //     echo "Error: Unable to connect to MySQL." . PHP_EOL;
