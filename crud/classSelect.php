@@ -75,22 +75,10 @@ class Select extends Connection
     public function carr($placa)
     {
         $conn = self::connect();
-        $result = $conn->prepare("SELECT * from carr where placa = :placa LIMIT 25");
+        $result = $conn->prepare("SELECT * from carr where placa = :placa and saida is null");
         $result->bindValue(':placa', $placa);
         $result->execute();
         if ($result->rowCount() >= 1) {
-            // echo "<table class='table table-dark table-striped'><thead><tr><th scope='col'>ID</th><th scope='col'>Placa</th><th scope='col'>nome</th><th scope='col'>CPF</th><th scope='col'>Data</th><th scope='col'>Entrada</th><th scope='col'>Saida</th><th scope='col'>Valor</th></tr></thead><tbody></tr>";
-            // while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                // echo "<td>{$row->carr}</td>";
-                // echo "<td>{$row->placa}</td>";
-                // echo "<td>{$row->name}</td>";
-                // echo "<td>{$row->cpf}</td>";
-                // echo "<td>{$row->data}</td>";
-                // echo "<td>{$row->entrada}</td>";
-                // echo "<td>{$row->saida}</td>";
-                // echo "<td>{$row->valor}</td></tr>";
-            // }
-            // echo "</tbody></table>";}
             return $row = $result->fetch(PDO::FETCH_ASSOC);
         }else {
             print "$result->getMessage()";
