@@ -7,7 +7,7 @@ $saida = $_POST['saida'];
 $valor = $_POST['dinheiro'];
 
 
-    $sql = " UPDATE carros SET saida = '$saida', valor = '$valor' WHERE id = '$id' ";
+    $sql = " UPDATE carr SET saida = '$saida' ,  valor = '$valor' WHERE carr = '$id' ";
     $result=mysqli_query($conexao,$sql);
     if (mysqli_query($conexao, $sql)) {
       // echo "Record updated successfully";
