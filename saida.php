@@ -22,10 +22,10 @@ $data = date("d/m/Y");
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <br><br>
 
-<form  method="post" id="consulta">
+<form  method="post" id="consulta" >
     <label for="input-id" class="col-sm-2">Placa</label>
     <input name="pesquisa" id="pesquisa" class="btn" placeholder="Digite a Placa Aqui" required="">
-    <button type="button" class="btn btn-large btn-large  btn-success">Pesquisar</button>
+    <button type="submit" class="btn btn-large btn-large  btn-success">Pesquisar</button>
 </form>
 
 <div class="content" style="display:none;">
