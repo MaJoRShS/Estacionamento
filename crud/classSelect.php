@@ -93,7 +93,6 @@ class Select extends Connection
             // echo "</tbody></table>";}
             return $row = $result->fetch(PDO::FETCH_ASSOC);
         }else {
-
             print "$result->getMessage()";
         }
     }
