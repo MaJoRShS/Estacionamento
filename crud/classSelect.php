@@ -117,11 +117,9 @@ class Select extends Connection
         $result->execute();
 
         if ($result->rowCount() >= 1) {
-            echo "<label class='col-sm-12'>Serviços</label><select name='service' for='service' id='service' class='form-control'>";
-            while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                    echo "<option value={$row['service']}> {$row['name']} - {$row['value']}</option>";
-                }
-            echo "</select></br>";
+            echo "<label for='service' class='col-sm-12'>Serviços</label>";
+            while ($row = $result->fetch(PDO::FETCH_OBJ)) {
+                echo "<div class='input-group mb-4 col-lg-12'><div class='input-group-prepend'><div class='input-group-text'><input type='checkbox' name='service' value='{$row->service}' aria-label='Chebox com Serviços oferecidos'></div></div><input type='text' class='form-control col-lg' aria-label='Input text com serviços' value='{$row->name} - {$row->value}' ></div>";}
         } else {
             $result->getMessage();
             echo $result;
