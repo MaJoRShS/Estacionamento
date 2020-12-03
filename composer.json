@@ -11,5 +11,8 @@
     "require": {},
     "autoload": {
         "files": ["crud/classConnect.php","crud/classInsert.php","crud/classSelect.php"]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
     }
 }
