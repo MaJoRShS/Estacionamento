@@ -77,68 +77,69 @@ function calcularDiferenca($hora_inicial, $hora_final) {
     $tempo = calcularDiferenca($entrada,$saida);
 
     
-    if ($tempo <= '00:15:00' && $tempo <= '00:30:00') {
-        $dinheiro = '2,50';
-    } else if($tempo >= '00:30:00' && $tempo <= '00:45:00') {
-        $dinheiro = '5,00';
-    }elseif ($tempo >= '00:45:00' && $tempo <=  '00:59:00') {
-        $dinheiro = '7,50';
-    }else if ($tempo >= '00:59:00'&& $tempo <=  "01:15:00") {
-        $dinheiro = '10,00';
+        
+    if ($tempo <= "00:15:00" && $tempo <= "00:30:00") {
+        $dinheiro = "2,50";
+    } else if($tempo >= "00:30:00" && $tempo <= "00:45:00") {
+        $dinheiro = "5,00";
+    }elseif ($tempo >= "00:45:00" && $tempo <=  "00:59:00") {
+        $dinheiro = "7,50";
+    }else if ($tempo >= "00:59:00"&& $tempo <=  "01:15:00") {
+        $dinheiro = "10,00";
     }else if($tempo >= "01:15:00" && $tempo <="01:30:00"){
-        $dinheiro = '11,00';
+        $dinheiro = "11,00";
     }else if($tempo >= "01:30:00" && $tempo <= "01:45:00"){
-        $dinheiro = '12,00';
+        $dinheiro = "12,00";
     }else if($tempo >= "01:45:00" && $tempo <= "02:00:00"){
-        $dinheiro = '13,00';
+        $dinheiro = "13,00";
     }else if($tempo >= "02:00:00" && $tempo <= "02:15:00"){
-        $dinheiro = '14,00';
+        $dinheiro = "14,00";
     }else if($tempo >= "02:15:00" && $tempo <= "02:30:00"){
-        $dinheiro = '15,00';
+        $dinheiro = "15,00";
     }else if($tempo >= "02:30:00" && $tempo <= "02:45:00"){
-        $dinheiro = '16,00';
+        $dinheiro = "16,00";
     }else if($tempo >= "02:45:00" && $tempo <= "03:00:00"){
-        $dinheiro = '17,00';
+        $dinheiro = "17,00";
     }else if($tempo >= "03:00:00" && $tempo <= "03:15:00"){
-        $dinheiro = '18,00';
+        $dinheiro = "18,00";
     }else if($tempo >= "03:15:00" && $tempo <= "03:30:00"){
-        $dinheiro = '19,00';
+        $dinheiro = "19,00";
     }else if($tempo >= "03:30:00" && $tempo <= "03:45:00"){
-        $dinheiro = '20,00';
+        $dinheiro = "20,00";
     }else if($tempo >= "03:45:00" && $tempo <= "04:00:00"){
-        $dinheiro = '21,00';
+        $dinheiro = "21,00";
     }else if($tempo >= "04:00:00" && $tempo <= "04:15:00"){
-        $dinheiro = '22,00';
+        $dinheiro = "22,00";
     }else if($tempo >= "04:15:00" && $tempo <= "04:30:00"){
-        $dinheiro = '23,00';
+        $dinheiro = "23,00";
     }else if($tempo >= "04:30:00" && $tempo <= "04:45:00"){
-        $dinheiro = '24,00';
+        $dinheiro = "24,00";
     }else if($tempo >= "04:45:00" && $tempo <= "05:00:00"){
-        $dinheiro = '25,00';
+        $dinheiro = "25,00";
     }else if($tempo >= "05:00:00" && $tempo <= "05:15:00"){
-        $dinheiro = '26,00';
+        $dinheiro = "26,00";
     }else if($tempo >= "05:15:00" && $tempo <= "05:30:00"){
-        $dinheiro = '27,00';
+        $dinheiro = "27,00";
     }else if($tempo >= "05:30:00" && $tempo <= "05:45:00"){
-        $dinheiro = '28,00';
+        $dinheiro = "28,00";
     }else if($tempo >= "05:45:00" && $tempo <= "06:00:00"){
-        $dinheiro = '29,00';
+        $dinheiro = "29,00";
     }else if($tempo >= "06:00:00" && $tempo <= "06:15:00"){
-        $dinheiro = '30,00';
+        $dinheiro = "30,00";
     }else if($tempo >= "06:15:00" && $tempo <= "06:30:00"){
-        $dinheiro = '31,00';
+        $dinheiro = "31,00";
     }else if($tempo >= "06:30:00" && $tempo <= "06:45:00"){
-        $dinheiro = '32,00';
+        $dinheiro = "32,00";
     }else if($tempo >= "06:45:00" && $tempo <= "07:00:00"){
-        $dinheiro = '33,00';
+        $dinheiro = "33,00";
     }else if($tempo >= "07:00:00" && $tempo <= "07:15:00"){
-        $dinheiro = '34,00';
+        $dinheiro = "34,00";
     }else if($tempo >= "07:15:00" && $tempo <= "07:30:00"){
-        $dinheiro = '35,00';
+        $dinheiro = "35,00";
     }else if($tempo >= "07:30:00" && $tempo <= "07:45:00"){
-        $dinheiro = '36,00';
+        $dinheiro = "36,00";
     }else{
-        $dinheiro = '37,00';
+        $dinheiro = "37,00";
     }
    
     $_POST['tempo'] = $tempo;
